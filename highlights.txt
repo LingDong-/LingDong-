@@ -1,17 +1,17 @@
 ========
-🔥 wenyan-lang
-I made a programming language in Classical Chinese.
---------
-wenyan
-book
-
-========
 🎨 Art
 I make art with code.
 --------
 shan-shui-inf
 nonflowers
 Hermit
+
+========
+🀄️ wenyan-lang
+I made a programming language in Classical Chinese.
+--------
+wenyan
+book
 
 ========
 🖌 Typography
