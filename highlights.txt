@@ -1,0 +1,35 @@
+========
+🔥 wenyan-lang
+I made a programming language in Classical Chinese.
+--------
+wenyan
+book
+
+========
+🎨 Art
+I make art with code.
+--------
+shan-shui-inf
+nonflowers
+Hermit
+
+========
+🖌 Typography
+I make fonts and typography experiments (mostly with Chinese characters)
+--------
+rrpl
+qiji-font
+edges2calligraphy
+chinese-hershey-font
+
+========
+🛠 Other cool stuff
+Apps, libraries, toolkits, algorithms, and more!
+--------
+linedraw
+skeleton-tracing
+wasm-fun
+r1b
+grand-timeline
+Loshu.js
+interesting-polygon-archive
