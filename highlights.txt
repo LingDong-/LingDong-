@@ -28,6 +28,7 @@ Apps, libraries, toolkits, algorithms, and more!
 --------
 linedraw
 skeleton-tracing
+cope
 wasm-fun
 r1b
 grand-timeline
