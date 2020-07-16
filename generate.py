@@ -14,7 +14,6 @@ def read_curl(f):
 	j = json.loads(open(f).read())
 	return {x['name']:x for x in j}
 
-
 projs = {}
 
 for tc in to_curl:
@@ -51,11 +50,14 @@ for i in range(len(hl)):
 	if i % 2 == 1 and i != len(hl)-1:
 		out += "</tr><tr>"
 out += "</tr></table>"
-
 out += """
 
 The list above is a small selection of my favorite projects. There're a lot more on the [Repos](https://github.com/LingDong-?tab=repositories) page. Check out my [portfolio](https://lingdong.works) and my [Glitch](https://glitch.com/@LingDong-) too!
 
+
+<sub>This README is generated with a Python script and Github Actions. [How it works](https://github.com/LingDong-/LingDong-/blob/master/generate.py)</sub>
+
 """
 
 open("README.md",'w').write(out)
+
