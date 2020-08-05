@@ -1,5 +1,5 @@
 import json
-import os 
+import os
 
 to_curl = [
 "https://api.github.com/users/LingDong-/repos?per_page=100",
@@ -13,6 +13,7 @@ lang_colors = {'1C Enterprise': '814CCC', 'ABAP': 'E8274B', 'ActionScript': '882
 def read_curl(f):
 	j = json.loads(open(f).read())
 	return {x['name']:x for x in j}
+
 
 projs = {}
 
@@ -44,12 +45,24 @@ for i in range(len(hl)):
 		lang = projs[item]['language']
 		link = projs[item]['html_url']
 
-		out += '<table><tr><td><h3><a href=\"'+link+"\">"+item+"</a></h3>"+desc+("&nbsp;"*max(0,100-len(desc)))+"</tr><tr><td><img src=\"https://via.placeholder.com/12/"+lang_colors[lang]+"/000000?text=+\"></img>&nbsp;"+lang+"&nbsp;&nbsp;&nbsp;&nbsp;★ "+star+"</td></tr></table>"
+		cpl = 45
+		cc = 0
+		desc = desc.split(" ")
+		descnl = ""
+		for d in desc:
+			descnl += d+" "
+			cc += len(d)+1
+			if cc > cpl:
+				descnl += "<br>"
+				cc = 0
+
+		out += '<table><tr><td><h3><a href=\"'+link+"\">"+item+"</a></h3>"+descnl+"<br>"+("_"*60)+"</tr><tr><td><img src=\"https://via.placeholder.com/12/"+lang_colors[lang]+"/000000?text=+\"></img>&nbsp;"+lang+"&nbsp;&nbsp;&nbsp;&nbsp;★ "+star+"</td></tr></table>"
 
 	out += "</td>"
 	if i % 2 == 1 and i != len(hl)-1:
 		out += "</tr><tr>"
 out += "</tr></table>"
+
 out += """
 
 The list above is a small selection of my favorite projects. There're a lot more on the [Repos](https://github.com/LingDong-?tab=repositories) page. Check out my [portfolio](https://lingdong.works) and my [Glitch](https://glitch.com/@LingDong-) too!
@@ -57,7 +70,7 @@ The list above is a small selection of my favorite projects. There're a lot more
 
 <sub>This README is generated with a Python script and Github Actions. [How it works](https://github.com/LingDong-/LingDong-/blob/master/generate.py)</sub>
 
+
 """
 
 open("README.md",'w').write(out)
-
