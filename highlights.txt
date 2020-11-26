@@ -7,11 +7,13 @@ nonflowers
 Hermit
 
 ========
-🀄️ wenyan-lang
-I made a programming language in Classical Chinese.
+🀄️ Language design
+I designed 文言 or wenyan-lang, a programming language in Classical Chinese, and some others.
 --------
 wenyan
 book
+wax
+psvg
 
 ========
 🖌 Typography
