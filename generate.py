@@ -12,6 +12,7 @@ lang_colors = {'1C Enterprise': '814CCC', 'ABAP': 'E8274B', 'ActionScript': '882
 
 def read_curl(f):
 	j = json.loads(open(f).read())
+	print(j)
 	return {x['name']:x for x in j}
 
 
